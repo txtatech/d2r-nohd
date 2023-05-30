@@ -81,17 +81,17 @@ Using the -sndbkg command line argument on the main and -ns on any other instanc
 
 If playing the game in a 800x600 fullscreen window there is a Town Portal bug where entering a portal from town may require two attempts or be avoided by clicking and holding while taking Town Portals. This bug does not occur when taking any portals other than portals located in town.
 
-D2R nohd Mod Footage & Installation Settings
+Nohd mod Version 1.3X Legacy Guard example video:
+https://www.youtube.com/watch?v=p4L38avatOk
+
+D2R nohd Mod Footage & Installation Settings: (This video is from an older version of the mod)
 https://www.youtube.com/watch?v=wSrh80Y2304
 
-How to play D2R with legacy graphics in an 800x600 window (Example)
+How to play D2R with legacy graphics in an 800x600 window (Example):
 https://youtu.be/2gV3QLNzIBo
 
 D2R Graphics Settings For A GTX-750 & Older PC:
 https://www.youtube.com/watch?v=7Zt3wkB7Pb4
-
-The nohd mod can be found here:
-https://www.nexusmods.com/diablo2resurrected/mods/283
 
 The nohd mod Version 1.3X (with Legacy Guard support) can be downloaded here:
 https://drive.google.com/file/d/1GRmM4dfJ37LbzPe6OQb9tGmR6DtcWtin/view?usp=share_link
