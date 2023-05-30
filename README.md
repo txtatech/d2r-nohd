@@ -98,6 +98,12 @@ https://drive.google.com/file/d/1GRmM4dfJ37LbzPe6OQb9tGmR6DtcWtin/view?usp=share
 
 Legacy Guard (a smaller version of Legacy Guardian) is a Python script for Nvidia GPUs that monitors the usage threshold
 and then sends the G key to the active D2R window when the GPU usage reaches the configured percentage.
+
+Direct Download for Legacy Guard:
 https://drive.google.com/file/d/17Lyeu97Gy_GQq_L5Pwezg758rtkK4MqD/view?usp=share_link
+
+Legacy Guard on Github:
+
+https://github.com/txtatech/d2r-legacy-guard
 
 ![Screenshot307](https://github.com/txtatech/d2r-nohd/assets/96074703/b4ecc071-c3dc-441a-9c00-52b42c246d0a)
