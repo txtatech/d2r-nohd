@@ -1,0 +1,544 @@
+{
+    "type": "UKComplianceModal", "name": "ComplyModal1",
+    "fields": {
+        ///"anchor": { "x": 0.5, "y": 0.5 },
+		"anchor": { "x": 0.3, "y": 0.2 },
+        "isDismissable": true,
+		"acceptsEscKeyEverywhere": true,
+    },
+    "children": [
+        {
+            "type": "NineTileImageWidget", "name": "TooltipTile",
+            "fields": {
+                /// OG "rect": { "x": -775, "y": -350, "width": 1550, "height": 700 },
+				/// works "rect": { "x": -775, "y": -350, "width": 1550, "height": 1000 },
+				"rect": { "x": -775, "y": -350, "width": 1610, "height": 1450 },
+                "filename": "PANEL/TooltipBorder/TooltipBorder",
+                "backgroundColor": [ 0.0, 0.0, 0.0, 0.80 ],
+                "tileScale": 1.0,
+            },
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "Title",
+                    "fields": {
+                        "rect": { "x": 0, "y": 0, "width": 1610, "height": 150 },
+                        "style": { //"$StyleModalDialogTitle" with vertical alignment
+                            "fontColor": "$FontColorWhite",
+                            "alignment": { "h": "center", "v": "center" },
+                            "options": { "lineWrap": true, "newlineHandling": "standard" },
+                            "pointSize": "$MediumLargeFontSize",
+                            "spacing": "$ReducedSpacing",
+                        },
+                        "text": "Helpful Links", 
+                    }
+                },
+				{
+                    "type": "ButtonWidget", "name": "Closer",
+                    "fields": {
+						"rect": { "x": 715, "y": 0 },
+				        "anchor": { "x": 0.5, "y": 0.0 },
+                        "tooltipString": "@strClose",
+                        "sound": "cursor_close_window_hd",
+                        "onClickMessage": "PanelManager:ClosePanel:ComplyModal1",
+                        "filename": "PANEL/closebtn_4x",
+					    "acceptsEscKeyEverywhere": true,
+                    }
+                },				
+                {
+                    "type": "TextBoxWidget", "name": "PromptParagraph1",
+                    "fields": {
+                        "rect": { "x": 50, "y": 110, "width": 1610, "height": 110 },
+                        "style": "$StyleModalDialogDescription",
+                        "text": "Launch the sites you need in a web browser. Enjoy!", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "NohdMod",
+                    "fields": {
+                        "rect": { "x": 5, "y": 220 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://www.nexusmods.com/diablo2resurrected/mods/283",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Nohd Site", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "NohdModLink",
+                    "fields": {
+                        "rect": { "x": 5, "y": 330 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://drive.google.com/file/d/1-vW_t_QqoYZOva9TW6eotJ6Oh9Fnx9mQ/view?usp=share_link",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Nohd Download", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "ModhdModLink",
+                    "fields": {
+                        "rect": { "x": 5, "y": 440 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://drive.google.com/file/d/1BKG8siZKBm87oLzjDi4cWDXHTWrql2Ge/view?usp=share_link",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Modhd Download", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Arreat",
+                    "fields": {
+                        "rect": { "x": 5, "y": 550 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:http://classic.battle.net/diablo2exp/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Arreat Summit", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Icy",
+                    "fields": {
+                        "rect": { "x": 5, "y": 660 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://www.icy-veins.com/d2/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Icy Veins", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Basin",
+                    "fields": {
+                        "rect": { "x": 5, "y": 770 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://www.theamazonbasin.com/wiki/index.php/Diablo_II",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Amazon Basin", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Diibps",
+                    "fields": {
+                        "rect": { "x": 5, "y": 880 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://forums.d2jsp.org/topic.php?t=2450747",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Breakpoints", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Multiboxer",
+                    "fields": {
+                        "rect": { "x": 5, "y": 990 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+                        "onClickMessage": "ModalMessage:Confirm:https://us.forums.blizzard.com/en/d2r/t/how-to-multiple-d2r-instances-requires-two-accounts/60546",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Multiboxing", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Runewizard",
+                    "fields": {
+                        "rect": { "x": 5, "y": 1100 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+                        "onClickMessage": "ModalMessage:Confirm:https://pathofdiablo.com/runewizard/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Runewizard", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "RuneList",
+                    "fields": {
+                        "rect": { "x": 5, "y": 1210 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+                        "onClickMessage": "ModalMessage:Confirm:https://diablo2.diablowiki.net/Rune_list",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Rune List", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "ExpExplained",
+                    "fields": {
+                        "rect": { "x": 5, "y": 1320 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+                        "onClickMessage": "ModalMessage:Confirm:https://www.purediablo.com/diablo-2/diablo-2-experience/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Exp Explained", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "D2RDex",
+                    "fields": {
+                        "rect": { "x": 540, "y": 220 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablodex.com/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Diablo DEX", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "D2Rvidsyt",
+                    "fields": {
+                        "rect": { "x": 540, "y": 330 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://www.youtube.com/playlist?list=PLfWUp4pD46c_UDU2kxlV7hWS-S1EzwU6h",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Videos", 
+                    }
+                },								
+                {
+                    "type": "ButtonWidget", "name": "D2RDatabase",
+                    "fields": {
+                        "rect": { "x": 540, "y": 440 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Database", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "D2RQuickRef",
+                    "fields": {
+                        "rect": { "x": 540, "y": 550 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diabloiiresurrected.com/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Reference", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Forums",
+                    "fields": {
+                        "rect": { "x": 540, "y": 660 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://us.forums.blizzard.com/en/d2r/c/general-discussion/6",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Forums", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Diirguide",
+                    "fields": {
+                        "rect": { "x": 540, "y": 770 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://d2r.guide/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Guide", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "Maxroll",
+                    "fields": {
+                        "rect": { "x": 540, "y": 880 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://maxroll.gg/d2/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Maxroll", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2JSForums",
+                    "fields": {
+                        "rect": { "x": 540, "y": 990 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://forums.d2jsp.org",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "JSP Forums", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "DropCalculator",
+                    "fields": {
+                        "rect": { "x": 540, "y": 1100 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://dropcalc.silospen.com/item.php",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Drop Calculator", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "TZtrackersite",
+                    "fields": {
+                        "rect": { "x": 540, "y": 1210 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://d2runewizard.com/terror-zone-tracker",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Terror Zone Tracker", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Dclonetrackers",
+                    "fields": {
+                        "rect": { "x": 540, "y": 1320 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/dclonetracker.php",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Diablo Clone Tracker", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2Recipes",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 220 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/recipes/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Horadric Recipes", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "D2Runeworder",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 330 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://www.purediablo.com/diablo-2/runewords",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Runewords", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2Rskillser",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 440 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/skills/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Skills", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2Rareas",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 550 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/areas/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Areas", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2Rmonstinfo",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 660 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/monsters/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Monsters", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2Runiquesinfo",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 770 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/uniques/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Uniques", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2Rsetsinfo",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 880 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/sets/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Sets", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2Rbasesinfo",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 990 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/base/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Bases", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2Rquestsinfo",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 1100 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.io/quests/",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Quests", 
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "D2Rmercsinfo",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 1210 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://www.purediablo.com/diablo-2/mercenaries",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "D2R Mercenaries", 
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "D2Rsparklechest",
+                    "fields": {
+                        "rect": { "x": 1075, "y": 1320 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:https://diablo2.diablowiki.net/Guide:Sparkly_Chests_v1.10,_by_Quickdeath",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Sparkly Chests", 
+                    }
+                },								
+            ]
+        },	
+        {
+            "type": "RectangleWidget", "name": "MessageLogBackground",
+            "fields": {
+                "fitToParent": true,
+                "color": [ 0.0, 0.0, 0.0, 0.7 ],
+            },
+        },
+        {
+            "type": "ChatListWidget", "name": "ListContainer",
+            "fields": {
+                "rect": { "x": 0, "y": 10, "width": 1200, "height": 770 },
+                "isHoverList": false,
+                "direction": "vertical",
+                "scrollControllerName": "ScrollBar",
+                "chatDataSource": "ChatHistory",
+                "growsBottomUp": true,
+                "itemsContainerSizeMultiplier": 5.0,
+            },
+            "children": [
+                {
+                    "type": "ListItemWidget", "name": "ChatEntryTemplate",
+                    "fields": {
+                        "rect": { "x": 10, "y": 0, "width": 1100, "height": 50 },
+                    },
+                    "children": [
+                        {
+                            "type": "TextBoxWithLinksWidget", "name": "MessageText",
+                            "fields": {
+                                "fitToParent": true,
+                                "text/fontType": "Chat",
+                                "text/style": {
+                                    "alignment": { "h": "left", "v": "center" },
+                                    "options": { "pipeCharacterBehavior" : "handle", "newlineHandling": "standard", "lineWrap": true },
+                                    "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                                    "fontFace": "BlizzardGlobal",
+                                    "pointSize": "$MediumFontSize",
+                                },
+                            }
+                        },
+                    ]
+                },
+				
+            ]
+        },
+        {
+            "type": "ScrollControllerWidget", "name": "ScrollBar",
+            "fields": {
+                "rect": { "x": 1170, "y": 40, "width": 26, "height": 700 },
+                "upArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollUpBtn",
+                "downArrowFilepath": "FrontEnd\\HD\\Final\\FrontEnd_ScrollDownBtn",
+                "barFilepath": "PauseMenu\\VerticalIndicator",
+                "viewName": "ListContainer",
+                "focusOnMouseOver": false,
+                "focusIndicatorVisible": false,
+            }
+        },
+    ]
+}
+

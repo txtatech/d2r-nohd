@@ -1,0 +1,170 @@
+{
+    "type": "CinematicsModal", "name": "CinematicsModal1",
+    "fields": {
+        "anchor": { "x": 0.45, "y": 0.1, "scale": 1.15 },
+        "rect": { "x": -384 },
+        "isDismissable": true,
+        "drawTint": true,
+    },
+    "children": [
+        {
+            "type": "GridImageWidget", "name": "Background",
+            "fields": {
+                "filename": "FrontEnd\\HD\\Final\\Cinematics\\CinematicsBG"
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "Title",
+            "fields": {
+                "rect": { "x": 96, "y": 68, "width": 972, "height": 61 },
+                "text": "Stanby Menu",
+                "textColor": { "r": 0, "g": 252, "b": 0, "a": 255 },
+				"style": "$StyleTitleBlock",
+                "style": {
+                    "options": { "newlineHandling": "standard" },
+                }
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "LegacyCheckbox1",
+            "fields": {
+				"rect": { "x": -35, "y": -35, "scale": 1.50 },
+				"filename": "Lobby\\Final\\ChatGem",
+				"tooltipString": "Legacy Guard",
+                "focusIndicatorOffset": { "x": 0, "y": -2 },
+				"onClickMessage": "PanelManager:OpenPanel:LegacySD",
+                "acceptsReturnKey": false,
+            },
+        },
+        {
+            "type": "ButtonWidget", "name": "ToggleLegacy11",
+            "fields": {
+				"rect": { "x": -35, "y": 70, "scale": 1.5 },
+				"filename": "Lobby\\Final\\ChatGem",
+				"tooltipString": "Friends",
+                "focusIndicatorOffset": { "x": 0, "y": -2 },
+				"onClickMessage": "PanelManager:OpenPanel:FriendsListPanel",
+                "acceptsReturnKey": false,
+            },
+        },		
+        {
+            "type": "ButtonWidget", "name": "Close",
+            "fields": {
+                "rect": { "x": 1075, "y": 9 },
+                "filename": "PANEL\\closebtn_4x",
+				"onClickMessage": "PanelManager:ClosePanel:CinematicsModal1",
+                "sound": "cursor_close_window_hd",
+                "hoveredFrame": 3,
+                "acceptsEscKeyEverywhere": true,
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Option0",
+            "fields": {
+                "rect": { "x": 160, "y": 170 },
+                "filename": "FrontEnd\\HD\\Final\\Cinematics\\CinematicsBtn",
+                "hoveredFrame": 3,
+                "textString": "Characters",
+				"onClickMessage": "PanelManager:OpenPanel:CharacterSelectPanel1",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleCinematicsButtonText",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Option1",
+            "fields": {
+                "rect": { "x": 160, "y": 320 },
+                "filename": "FrontEnd\\HD\\Final\\Cinematics\\CinematicsBtn",
+                "hoveredFrame": 3,
+                "textString": "Message Log",
+				"onClickMessage": "PanelManager:OpenPanel:MessageLogPanel_640x4801",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleCinematicsButtonText",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Option2",
+            "fields": {
+                "rect": { "x": 160, "y": 470 },
+                "filename": "FrontEnd\\HD\\Final\\Cinematics\\CinematicsBtn",
+                "hoveredFrame": 3,
+                "textString": "Spellbook",
+				"onClickMessage": "PanelManager:OpenPanel:SpellbookPanel1",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleCinematicsButtonText",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Option3",
+            "fields": {
+                "rect": { "x": 160, "y": 620 },
+                "filename": "FrontEnd\\HD\\Final\\Cinematics\\CinematicsBtn",
+                "hoveredFrame": 3,
+                "textString": "Notes",
+				"onClickMessage": "PanelManager:OpenPanel:modnotes",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleCinematicsButtonText",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Option4",
+            "fields": {
+                "rect": { "x": 160, "y": 770 },
+                "filename": "FrontEnd\\HD\\Final\\Cinematics\\CinematicsBtn",
+                "hoveredFrame": 3,
+                "textString": "Make Game",
+				"onClickMessage": "PanelManager:OpenPanel:CreateGamePanel1",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleCinematicsButtonText",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Option5",
+            "fields": {
+                "rect": { "x": 160, "y": 920 },
+                "filename": "FrontEnd\\HD\\Final\\Cinematics\\CinematicsBtn",
+                "hoveredFrame": 3,
+                "textString": "Join Game",
+				"onClickMessage": "PanelManager:OpenPanel:JoinGamePanel1",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleCinematicsButtonText",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "Option6",
+            "fields": {
+                "rect": { "x": 160, "y": 1070 },
+                "filename": "FrontEnd\\HD\\Final\\Cinematics\\CinematicsBtn",
+                "hoveredFrame": 3,
+                "textString": "Make Games",
+				"onClickMessage": "PanelManager:OpenPanel:CreateGamePanel1",
+                "textColor": "$LightButtonTextColor",
+                "text/style": "$StyleCinematicsButtonText",
+            }
+        },
+        {
+            "type": "ButtonWidget", "name": "StandbyBtn1",
+            "fields": {
+                "rect": { "x": 662, "y": 1292 },
+			    "filename": "Lobby\\CreateGame\\CreateGame_DifficultyBTN",
+                "disabledFrame": 2,
+                "hoveredFrame": 3,
+                "textString": "STANDY",
+				"textColor": { "r": 0, "g": 252, "b": 0, "a": 255 },
+                "pointSize": "$SmallFontSize",
+                "onClickMessage": "Cinematics:Close",
+                "tooltipString": "Enable Stanby Mode!!!",
+				"sound": "cursor_close_window_hd",
+                "acceptsEscKeyEverywhere": true,
+            }
+        },
+        {
+            "type": "TextBoxWidget", "name": "LegacyCinematicsText",
+            "fields": {
+                "rect": { "x": 202, "y": 1292, "width": 500, "height": 66, "scale": 0.95 },
+                "text": "Standby Notes: Use Legacy menus. Leaving a game exits Stanby. All movement is disabled! Use at own risk!",
+				"style": "$StyleSettingsText",
+            }
+        },		
+    ]
+}

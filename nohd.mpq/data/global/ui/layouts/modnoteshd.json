@@ -1,0 +1,122 @@
+{
+    "type": "HelpPanel", "name": "modnotes",
+    "fields": {
+        "priority": 300,
+        "fitToParent": true,
+        "isDismissable": true,
+		"acceptsEscKeyEverywhere": true,
+        "childFormats": [
+        ],
+    },
+    "children": [
+        {
+            "type": "RectangleWidget", "name": "TransparentBG",
+            "fields": {
+                "fitToScreen": true,
+                "color": [ 0.0, 0.0, 0.0, 0.6 ]
+            },
+            "children": [
+                {
+                    "type": "ClickCatcherWidget", "name": "catcher",
+                    "fields": {
+                        "fitToParent": true
+                    }
+                },
+            ]
+        },
+        {
+            "type": "Widget", "name": "CenterSection",
+            "fields": {
+                "anchor": { "x": 0.5, "y": 0.5 },
+                "rect": { "x": -45, "y": -785 },
+            },
+            "children": [
+
+                // Text
+                {
+                    "type": "TextBoxWidget", "name": "Title",
+                    "fields": {
+                        "rect": { "x": 0, "y": -150 },
+                        "text": "Notes",
+                        "style": {
+                            "fontColor": "$FontColorLightGray",
+                            "pointSize": "$ExtraLargeFontSize",
+                            "alignment": { "v": "center", "h": "center" }
+                        }
+                    }
+                },
+                // All widgets below should use FONT_FORMAL_12PT
+                // Gameplay
+                {
+                    "type": "TextBoxWidget", "name": "GameplayLabel",
+                    "fields": {
+                        "rect": { "x": -920, "y": 60 },
+                        "text": "Use at will!",
+                        "style": {
+                            "fontColor": "$FontColorLightGray",
+                            "pointSize": "$LargeFontSize",
+                            "alignment": { "v": "center", "h": "left" }
+                        }
+                    }
+                },
+                // White text
+                {
+                    "type": "TextBoxWidget", "name": "ModReadme",
+                    "fields": {
+                        "rect": { "x": -800, "y": 100, "width": 860, "height": 600  },
+                        "text": "Common commands: /nopickup /channel leave /channel join /fps /framerate /whisper /who /whois /whoami /time /uberdiablo /terrorized Ctrl+Click:Drops-Item Shift+Click:Shows-Item",
+                        "fontType": "12ptF",
+                        "style": {
+                            "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                            "pointSize": 32,
+							"options": { "newlineHandling": "standard" , "lineWrap": true },
+							"alignment": { "h": "left" },
+							"spacing": { "leading": 1.2 },
+                        }
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "ModReadmeTwo",
+                    "fields": {
+                        "rect": { "x": -800, "y": 600, "width": 860, "height": 600  },
+                        "text": "Leveling guide: 1-15 Trist Runs 15-24 Tombs 21-24 Cows 24 Anc 25-40 CS/Baal 40 Anc NM 41-60 CS/Baal NM 60 Anc Hell 61-99 Baal/Nihl/TZs Hell",
+                        "fontType": "12ptF",
+                        "style": {
+                            "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                            "pointSize": 32,
+							"options": { "newlineHandling": "standard" , "lineWrap": true },
+							"alignment": { "h": "left" },
+							"spacing": { "leading": 1.2 },
+                        }
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "ModReadmeTwo",
+                    "fields": {
+                        "rect": { "x": -800, "y": 1000, "width": 860, "height": 600  },
+                        "text": "Uber Keys: Countess A1 Key of Terror. Summoner A2 Key of Hate. Nihlathak A5 Key of Destruction.",
+                        "fontType": "12ptF",
+                        "style": {
+                            "fontColor": { "r": 255, "g": 255, "b": 255, "a": 255 },
+                            "pointSize": 32,
+							"options": { "newlineHandling": "standard" , "lineWrap": true },
+							"alignment": { "h": "left" },
+							"spacing": { "leading": 1.2 },
+                        }
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Close",
+                    "fields": {
+                        "rect": { "x": 295, "y": 0 },
+                        "tooltipString": "@strClose",
+                        "sound": "cursor_close_window_hd",
+                        "onClickMessage": "PanelManager:ClosePanel:modnotes",
+                        "filename": "PANEL/closebtn_4x",
+						"acceptsEscKeyEverywhere": true,
+                    }
+                },
+            ]
+        },
+    ]
+}

@@ -1,0 +1,755 @@
+{
+    "type": "BugPanel", "name": "SpellbookPanel1",
+    "fields": {
+		"anchor": { "x": 0.2, "y": 0.5 },
+		"defaultWidget": "ReportType",
+        "drawTint": true,
+        "isDismissable": true,
+		///"acceptsEscKeyEverywhere": true,
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "BugClickCatcher",
+            "fields": {
+                "fitToParent": true
+            }
+        },		
+        {
+            "type": "Widget", "name": "BugParent",
+            "fields": {
+                "rect": { "x": -438, "y": -510, "scale": 1.1 },
+                "anchor": { "x": 0.5, "y": 0.5 },
+            },
+            "children": [
+                {
+                    "type": "NineTileImageWidget", "name": "BugTitleTile",
+                    "fields": {
+                        "filename": "PANEL/TooltipBorder/TooltipBorder",
+                        "backgroundColor": [ 0.0, 0.0, 0.0, 0.80 ],
+                        "tileScale": 1.0,
+                        "rect": { "x": 0, "y": 0, "width": 876, "height": 0 },
+                    },
+                    "children": [
+                        {
+                            "type": "TextBoxWidget", "name": "BugBuildText",
+                            "fields": {
+                                "anchor": { "x": 0.5 },
+                                "text": "SPELLBOOK",
+                                "style": {
+                                    "pointSize": "$LargeFontSize",
+                                    "alignment": { "v": "center", "h": "center" },
+                                    "fontColor": "$FontColorGray",
+                                }
+                            }
+                        },
+                    ]
+                },
+                {
+                    "type": "NineTileImageWidget", "name": "BugDescriptionTile",
+                    "fields": {
+                        "filename": "PANEL/TooltipBorder/TooltipBorder",
+                        "backgroundColor": [ 0.0, 0.0, 0.0, 0.80 ],
+                        "tileScale": 1.0,
+                        "rect": { "x": 0 , "y": 62, "width": 876, "height": 887 },
+                    },
+                },
+				//the-text-box
+                {
+                    "type": "RectangleWidget", "name": "DescriptionBackgroundBox",
+                    "fields": {
+                        "rect": { "x": 50, "y": 85, "width": 776, "height": 710 },
+                        "color": [ 0.0, 0.0, 0.0, 0.4 ],
+                        "borderColor":  "$TooltipBorderColor",
+                    }
+                },
+				//to-scribe-away...
+                {
+                    "type": "InputTextBoxWidget", "name": "BugDescription",
+                    "fields": {
+						"rect": { "x": 60, "y": 90, "width": 756, "height": 770 },
+                        "backgroundColor": { "r": 0, "g": 0, "b": 0, "a": 0 },
+                        "canInsertNewlines": true,
+                        "virtualKeyboardType": "Default",
+                        "imeEnabled": true,
+                        "fontStyle": {
+                            "alignment": { "h": "left", "v": "top" },
+                            "spacing": { "leading": 0.9 },
+                            "fontFace": "BlizzardGlobal",
+                            "pointSize": "$MediumFontSize",
+                            "fontColor": "$FontColorLightGray",
+                            "options": { "lineWrap": true },
+                        },
+                        //"fontType": "32pt",
+						"fontType": "16pt",
+                        "maxStringLength": 1500,
+                        "hint/style": {
+                            "alignment": { "h": "left", "v": "top" },
+                            "spacing": { "leading": 0.68 },
+                            "pointSize": "$MediumFontSize",
+                            "fontFace": "BlizzardGlobal",
+                            "fontColor": "$FontColorLightGray",
+                        },
+                        "hint/text": "Scribe away...",
+                        "navigation": {
+                            "next": { "name": "Ok" },
+                        }
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Ok",
+                    "fields": {
+                        "rect": { "x": 50, "y": 818 },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonSmall",
+                        "textString": "SCROLLS",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+						"onClickMessage": "PanelManager:OpenPanel:BugPanel1",
+                        "pressedFrame": 1,
+                        "hoveredFrame": 3,
+                        "disabledFrame": 2,
+                        "navigation": {
+                            "previous": { "name": "BugDescription" },
+                            "next": { "name": "Cancel" },
+                        }
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Cancel",
+                    "fields": {
+                        "rect": { "x": 460, "y": 818 },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonSmall",
+                        "textString": "CLOSE",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "onClickMessage": "PanelManager:ClosePanel:SpellbookPanel1",
+                        "acceptsEscKeyEverywhere": true,
+                        "pressedFrame": 1,
+                        "hoveredFrame": 3,
+                        "disabledFrame": 2,
+                        "navigation": {
+                            "previous": { "name": "Ok" },
+                        }
+                    }
+                }
+            ]
+        },		
+		/////spells 1
+		        {
+            "type": "TableWidget", "name": "TableMaker1",
+            "fields": {
+				"horizontalSpacing": 10, "verticalSpacing": 10,
+                "alignment": "right and center",
+				/////"alignment": "center",
+				"anchor": { "x": 0.5, "y": 0.5 },
+                "rect": { "x": 505, "y": -505, "scale": 1.2 },
+				//"columns": [ { "width": 65, "alignment": { "h": "center", "v": "center" } } ],
+                ///"rowHeight": 90,
+            },
+            "children": [
+                {
+                    "type": "TableRowWidget", "name": "Gemzzz0",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller0",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Chat",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:ChatPanel1",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },			
+                {
+                    "type": "TableRowWidget", "name": "Gemzzz1",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller1",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Friends",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:FriendsListPanel",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzz2",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller2",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Create Game",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:CreateGamePanel1",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzz3",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller3",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Join Game",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:OpenPanel:JoinGamePanel1",
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzz4",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller4",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Add Friend",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:OpenPanel:AddFriendModal",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzz5",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller5",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Message Log",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:OpenPanel:MessageLogPanel_640x4801",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzz6",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller6",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Characters",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:OpenPanel:CharacterSelectPanel1",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzz7",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller7",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Call Lobby",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:OpenPanel:LobbyBackgroundPanel",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },				
+
+            ]
+        },
+		/////spells4
+		        {
+            "type": "TableWidget", "name": "TableMaker4",
+            "fields": {
+				"horizontalSpacing": 10, "verticalSpacing": 10,
+                "alignment": "right and center",
+				/////"alignment": "center",
+				"anchor": { "x": 0.5, "y": 0.5 },
+                "rect": { "x": 705, "y": -505, "scale": 1.2 },
+				//"columns": [ { "width": 65, "alignment": { "h": "center", "v": "center" } } ],
+                ///"rowHeight": 90,
+            },
+            "children": [
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz0334",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller0334",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Console Game List",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "ConsoleLobby:OpenPlaySubPanel:GameListPanel",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },			
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz14",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller1334",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Console Make Game",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "ConsoleLobby:OpenPlaySubPanel:GameCreatorPanel",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz24",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller2334",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Helpful Links",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:ComplyModal1",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz34",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller3334",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Toggle HUD",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:TogglePanel:HUDPanel",
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz44",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller4334",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Clone Or Rename",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:OpenPanel:RenameCharacterModal1",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz54",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller5334",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Ladder",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:TogglePanel:LadderPanel",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz64",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller6334",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Horadric Cube",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:OpenPanel:HoradricCubeLayout",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz74",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller7334",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Mercenary",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:OpenPanel:HirelingInventoryPanel",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },				
+
+            ]
+        },		
+		///spells 3
+		{
+            "type": "TableWidget", "name": "TableMaker3",
+            "fields": {
+				"horizontalSpacing": 10, "verticalSpacing": 10,
+                "alignment": "right and center",
+				/////"alignment": "center",
+				"anchor": { "x": 0.5, "y": 0.5 },
+                "rect": { "x": 605, "y": -505, "scale": 1.2 },
+				//"columns": [ { "width": 65, "alignment": { "h": "center", "v": "center" } } ],
+                ///"rowHeight": 90,
+            },
+            "children": [
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz033",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller033",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Waypoints",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:WaypointsPanelExpansion",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },			
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz1",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller133",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Notes",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:modnotes",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz2",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller233",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Settings",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:SettingsPanel",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz3",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller333",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Legacy Guard",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:LegacySD",
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz4",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller433",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Toggle MiniHUD",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:TogglePanel:minihp",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz5",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller533",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Large Create Game",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "PanelManager:OpenPanel:CreateGamePanel2",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz6",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller633",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Large Join Game",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+                                "onClickMessage": "PanelManager:OpenPanel:JoinGamePanel2",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Glemzzz7",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller733",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Test Web",
+								"focusIndicatorOffset": { "x": 0, "y": -2 },
+								"onClickMessage": "ModalMessage:Confirm:https://www.battle.net/support/article/aadc",
+                                "sound": "select",
+								"acceptsReturnKey": false,
+                            }
+                        }
+                    ]
+                },				
+
+            ]
+        },		
+		///spells 2
+		        {
+            "type": "TableWidget", "name": "TableMaker2",
+            "fields": {
+				"anchor": { "x": 0.5, "y": 0.5 },
+                "rect": { "x": -505, "y": -355, "scale": 1.1 },
+				"columns": [ { "width": 65, "alignment": { "h": "center", "v": "center" } } ],
+                "rowHeight": 90,
+            },
+            "children": [
+                {
+                    "type": "TableRowWidget", "name": "Gemzzzz00",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller0a",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Standby Menu",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:CinematicsModal1",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },			
+                {
+                    "type": "TableRowWidget", "name": "Gemzzzz0",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller1a",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Screen Space Calibration",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:ScreenSpaceCalibrationPanel",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzzz1",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller2a",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "TCPIP *Unlearned",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        //"onClickMessage": "PanelManager:OpenPanel:TCPIPPanel",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzzz2",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller3a",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Controller Reconnect *Untested",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:ControllerReconnectPanel",
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzzz3",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller5",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "HD Calibration",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:HDRCalibrationPanel",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },				
+                {
+                    "type": "TableRowWidget", "name": "Gemzzzz4",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller6",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Gamma Calibration",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:GammaCalibrationPanel",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },				
+                {
+                    "type": "TableRowWidget", "name": "Gemzzzz5",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller4a",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Bug Panel",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        "onClickMessage": "PanelManager:OpenPanel:BugPanel",
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzzz6",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller5a",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Blocking *Unlearned",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        ///"onClickMessage": "PanelManager:OpenPanel:BlockingPanel",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "TableRowWidget", "name": "Gemzzzz7",
+                    "children": [
+                        {
+                            "type": "ButtonWidget", "name": "Speller6a",
+                            "fields": {
+                                "filename": "Lobby\\Final\\ChatGem",
+                                "hoveredFrame": 3,
+						        "tooltipString": "Don't Die!",
+                                "focusIndicatorOffset": { "x": 0, "y": -2 },
+						        ///"onClickMessage": "PanelManager:OpenPanel:YouDiedModal",
+                                "acceptsReturnKey": false,
+                                "sound": "select",
+                            }
+                        }
+                    ]
+                },
+            ]
+        },
+	]
+}	
+	
+

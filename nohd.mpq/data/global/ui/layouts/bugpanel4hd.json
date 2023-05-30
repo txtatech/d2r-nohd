@@ -1,0 +1,139 @@
+{
+    "type": "BugPanel", "name": "BugPanel4",
+    "fields": {
+		"anchor": { "x": 0.90, "y": 0.5 },
+        "defaultWidget": "ReportType",
+        "drawTint": true,
+        "isDismissable": false,
+		"acceptsEscKeyEverywhere": true,
+    },
+    "children": [
+        {
+            "type": "ClickCatcherWidget", "name": "BugClickCatcher4",
+            "fields": {
+                "fitToParent": true
+            }
+        },
+        {
+            "type": "Widget", "name": "BugParent4",
+            "fields": {
+                "rect": { "x": -438, "y": -510 },
+                "anchor": { "x": 0.5, "y": 0.5 },
+            },
+            "children": [
+                {
+                    "type": "NineTileImageWidget", "name": "BugTitleTile4",
+                    "fields": {
+                        "filename": "PANEL/TooltipBorder/TooltipBorder",
+                        "backgroundColor": [ 0.0, 0.0, 0.0, 0.80 ],
+                        "tileScale": 1.0,
+                        "rect": { "x": 0, "y": 0, "width": 876, "height": 0 },
+                    },
+                    "children": [
+                        {
+                            "type": "TextBoxWidget", "name": "BugBuildText4",
+                            "fields": {
+                                "anchor": { "x": 0.5 },
+                                "text": "PAGE FOUR",
+                                "style": {
+                                    "pointSize": "$LargeFontSize",
+                                    "alignment": { "v": "center", "h": "center" },
+                                    "fontColor": "$FontColorYellow",
+                                }
+                            }
+                        },
+                    ]
+                },
+				//background-maybe
+                {
+                    "type": "NineTileImageWidget", "name": "BugDescriptionTile4",
+                    "fields": {
+                        "filename": "PANEL/TooltipBorder/TooltipBorder",
+                        "backgroundColor": [ 0.0, 0.0, 0.0, 0.80 ],
+                        "tileScale": 1.0,
+                        "rect": { "x": 0 , "y": 62, "width": 876, "height": 887 },
+                    },
+                },
+				//the-text-box
+                {
+                    "type": "RectangleWidget", "name": "DescriptionBackgroundBox4",
+                    "fields": {
+                        "rect": { "x": 50, "y": 85, "width": 776, "height": 710 },
+                        "color": [ 0.0, 0.0, 0.0, 0.4 ],
+                        "borderColor":  "$TooltipBorderColor",
+                    }
+                },
+				//the-scribe-away...
+                {
+                    "type": "InputTextBoxWidget", "name": "BugDescription4",
+                    "fields": {
+						"rect": { "x": 60, "y": 90, "width": 756, "height": 770 },
+                        "backgroundColor": { "r": 0, "g": 0, "b": 0, "a": 0 },
+                        "canInsertNewlines": true,
+                        "virtualKeyboardType": "Default",
+                        "imeEnabled": true,
+                        "fontStyle": {
+                            "alignment": { "h": "left", "v": "top" },
+                            "spacing": { "leading": 0.9 },
+                            "fontFace": "BlizzardGlobal",
+                            "pointSize": "$MediumFontSize",
+                            "fontColor": "$FontColorYellow",
+                            "options": { "lineWrap": true },
+                        },
+                        //"fontType": "32pt",
+						"fontType": "16pt",
+                        "maxStringLength": 1500,
+						//og//"maxStringLength": 750,
+                        "hint/style": {
+                            "alignment": { "h": "left", "v": "top" },
+                            "spacing": { "leading": 0.68 },
+                            "pointSize": "$MediumFontSize",
+                            "fontFace": "BlizzardGlobal",
+                            "fontColor": "$FontColorYellow",
+                        },
+                        "hint/text": "Scribe away...",
+                        "navigation": {
+                            "next": { "name": "Ok4" },
+                        }
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Ok4",
+                    "fields": {
+                        "rect": { "x": 50, "y": 818 },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonSmall",
+                        "textString": "CHAT",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+						"onClickMessage": "PanelManager:OpenPanel:ChatPanel1",
+                        "pressedFrame": 1,
+                        "hoveredFrame": 3,
+                        "disabledFrame": 2,
+                        "navigation": {
+                            "previous": { "name": "BugDescription" },
+                            "next": { "name": "Cancel4" },
+                        }
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "Cancel4",
+                    "fields": {
+                        "rect": { "x": 460, "y": 818 },
+                        "filename": "FrontEnd\\HD\\Final\\FrontEnd_ButtonSmall",
+                        "textString": "CLOSE",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "onClickMessage": "PanelManager:ClosePanel:BugPanel4",
+                        "acceptsEscKeyEverywhere": true,
+                        "pressedFrame": 1,
+                        "hoveredFrame": 3,
+                        "disabledFrame": 2,
+                        "navigation": {
+                            "previous": { "name": "Ok4" },
+                        }
+                    }
+                }
+            ]
+        },
+    ]
+}

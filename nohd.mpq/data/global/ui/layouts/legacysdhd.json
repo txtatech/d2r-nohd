@@ -1,0 +1,95 @@
+{
+    "type": "UKComplianceModal", "name": "LegacySD",
+    "fields": {
+        ///og "anchor": { "x": 0.5, "y": 0.5 },
+		"anchor": { "x": 0.4, "y": 0.3 },
+        "isDismissable": true,
+    },
+    "children": [
+        {
+            "type": "NineTileImageWidget", "name": "TooltipTile",
+            "fields": {
+                "rect": { "x": -775, "y": -350, "width": 1550, "height": 700 },
+                "filename": "PANEL/TooltipBorder/TooltipBorder",
+                "backgroundColor": [ 0.0, 0.0, 0.0, 0.80 ],
+                "tileScale": 1.0,
+            },
+            "children": [
+                {
+                    "type": "TextBoxWidget", "name": "Title",
+                    "fields": {
+                        "rect": { "x": 0, "y": 0, "width": 1550, "height": 150 },
+                        "style": { //"$StyleModalDialogTitle" with vertical alignment
+                            "fontColor": "$FontColorWhite",
+                            "alignment": { "h": "center", "v": "center" },
+                            "options": { "lineWrap": true, "newlineHandling": "standard" },
+                            "pointSize": "$MediumLargeFontSize",
+                            "spacing": "$ReducedSpacing",
+                        },
+                        "text": "Legacy Guard Launcher",
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "PromptParagraph1",
+                    "fields": {
+                        "rect": { "x": 50, "y": 130, "width": 1450, "height": 130 },
+                        "style": "$StyleModalDialogDescription",
+                        "text": "The HD Blocking Mod is working.",
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "PromptParagraph2",
+                    "fields": {
+                        "rect": { "x": 50, "y": 260, "width": 1450, "height": 130 },
+                        "style": "$StyleModalDialogDescription",
+                        "text": "You can start and stop Legacy Guard below.",
+                    }
+                },
+                {
+                    "type": "TextBoxWidget", "name": "PromptParagraph3",
+                    "fields": {
+                        "rect": { "x": 50, "y": 390, "width": 1450, "height": 130 },
+                        "style": "$StyleModalDialogDescription",
+                        "text": "Press \"Escape\" to dismiss this window.",
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "LegacyMode2",
+                    "fields": {
+                        "rect": { "x": 235, "y": 550 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+						"onClickMessage": "ModalMessage:Confirm:start_legacyguard.py",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEButtonText",
+                        "textString": "Start Legacy",
+                    }
+                },				
+                {
+                    "type": "ButtonWidget", "name": "LegacyMode4",
+                    "fields": {
+                        "rect": { "x": 785, "y": 550 },
+                        "filename": "Panel\\Modals\\ModalButton",
+                        "focusIndicatorFilename": "Controller/HoverImages/ModalButton_NoGap_Hover",
+                        "hoveredFrame": 3,
+                        "onClickMessage": "ModalMessage:Confirm:stop_legacyguard.py",
+                        "textColor": "$LightButtonTextColor",
+                        "text/style" : "$StyleFEMultiLineButtonText",
+                        "textString": "Stop Legacy",
+                    }
+                },
+                {
+                    "type": "ButtonWidget", "name": "GetLegacy1",
+                    "fields": {
+				        "rect": { "x": 0, "y": 0, "scale": 0.5 },
+                        "filename": "Lobby\\Final\\ChatGem",
+				        "tooltipString": "Download Legacy Guard",
+                        "focusIndicatorOffset": { "x": 0, "y": -2 },
+				        "onClickMessage": "ModalMessage:Confirm:https://drive.google.com/file/d/17Lyeu97Gy_GQq_L5Pwezg758rtkK4MqD/view?usp=share_link",
+					}	
+				},			
+            ]
+        },
+    ]
+}

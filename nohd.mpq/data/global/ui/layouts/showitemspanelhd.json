@@ -1,0 +1,9 @@
+{
+  "type": "ShowItemsPanel", "name": "ShowItemsPanel",
+  "fields": {
+    "priority": -10,
+    "isDismissable": false,
+	"acceptsEscKeyEverywhere": true,
+    "showDurationMilliseconds": 10,
+  }
+}
