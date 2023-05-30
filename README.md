@@ -107,3 +107,12 @@ Legacy Guard on Github:
 https://github.com/txtatech/d2r-legacy-guard
 
 ![Screenshot307](https://github.com/txtatech/d2r-nohd/assets/96074703/b4ecc071-c3dc-441a-9c00-52b42c246d0a)
+
+
+**Acknowledgments And Credits**
+
+This mod was forked from a very early version of the original blockhd mod.
+
+None of it would have been possible without the efforts and insights of Miles Teg and Gimli of the Phrozen Keep.
+
+The original blockhd mod has been forked to TinyMod found here: https://github.com/D2R-Gimli/TinyMod
