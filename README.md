@@ -4,7 +4,7 @@ A quality of life mod that blocks HD content in Diablo II: Resurrected for playi
 
 Nohd mod on Nexusmods: https://www.nexusmods.com/diablo2resurrected/mods/283
 
-Features:
+#Features:
 
 Play D2R in Legacy Graphics mode.
 
