@@ -4,7 +4,7 @@ A quality of life mod that blocks HD content in Diablo II: Resurrected for playi
 
 Nohd mod on Nexusmods: https://www.nexusmods.com/diablo2resurrected/mods/283
 
-#Features:
+**Features:**
 
 Play D2R in Legacy Graphics mode.
 
@@ -50,7 +50,7 @@ Many unlisted features.
 
 General 1.3 Notes: This is a work in progress and very buggy. The json structuring needs a lot of work and probably a good bit of cleanup considering this is all new terrain for me! Some things may or may not work so use at your own risk!   
 
-Installation:
+**Installation:**
 
 Step 1: Copy "mods" folder into your D2R installation directory.
 
@@ -70,12 +70,12 @@ Step 8: Type in the command line arguments "-mod nohd" (no quotes)
 
 Step 9: Save changes and click the 'Play' button!
 
-Usage:
+**Usage:**
 
 When first entering a game the screen will be black.
 Once your character is in a game press the G key to see something.
 
-Notes:
+**Notes:**
 
 Using the -sndbkg command line argument on the main and -ns on any other instances of the game helps with sound issues when multiboxing. 
 
