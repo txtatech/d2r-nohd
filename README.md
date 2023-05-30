@@ -102,9 +102,7 @@ and then sends the G key to the active D2R window when the GPU usage reaches the
 Direct Download for Legacy Guard:
 https://drive.google.com/file/d/17Lyeu97Gy_GQq_L5Pwezg758rtkK4MqD/view?usp=share_link
 
-Legacy Guard on Github:
-
-https://github.com/txtatech/d2r-legacy-guard
+Legacy Guard on Github: https://github.com/txtatech/d2r-legacy-guard
 
 ![Screenshot307](https://github.com/txtatech/d2r-nohd/assets/96074703/b4ecc071-c3dc-441a-9c00-52b42c246d0a)
 
