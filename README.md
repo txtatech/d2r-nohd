@@ -1,4 +1,5 @@
-# d2r-nohd
+# Diablo II: Resurected Nohd mod.
+
 A quality of life mod that blocks HD content in Diablo II: Resurrected for playing the game in legacy graphics.
 
 Nohd mod on Nexusmods: https://www.nexusmods.com/diablo2resurrected/mods/283
